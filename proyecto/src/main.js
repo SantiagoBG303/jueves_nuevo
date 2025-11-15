@@ -5,6 +5,7 @@ import mostrarLogin from "./componentes/login.js";
 import mostrarRegistro from "./componentes/registro.js";
 import mostrarOriginal from "./componentes/original.js";
 import mostrarHome from "./componentes/home.js"; 
+import './style.css';
 
 // Detectar usuario
 onAuthStateChanged(auth, (user) => {
