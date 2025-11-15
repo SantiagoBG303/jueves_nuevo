@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig.js"; 
-import mostrarRegistro from "./registro.js";  // <-- Import correcto
+import mostrarRegistro from "./registro.js";  
 
 export default function mostrarLogin() {
   const app = document.getElementById("app");

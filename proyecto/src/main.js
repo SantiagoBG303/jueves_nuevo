@@ -4,7 +4,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import mostrarLogin from "./componentes/login.js";
 import mostrarRegistro from "./componentes/registro.js";
 import mostrarOriginal from "./componentes/original.js";
-import mostrarHome from "./componentes/home.js"; // Import del home real
+import mostrarHome from "./componentes/home.js"; 
 
 // Detectar usuario
 onAuthStateChanged(auth, (user) => {
