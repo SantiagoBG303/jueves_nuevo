@@ -1,5 +1,5 @@
 import { auth } from "./firebaseConfig.js";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signOut } from "firebase/auth";
 
 import mostrarLogin from "./componentes/login.js";
 import mostrarRegistro from "./componentes/registro.js";
@@ -21,7 +21,10 @@ onAuthStateChanged(auth, (user) => {
 
     document.getElementById("menuHome").addEventListener("click", mostrarHome);
     document.getElementById("menuOriginal").addEventListener("click", mostrarOriginal);
-    document.getElementById("menuLogout").addEventListener("click", () => auth.signOut());
+    document.getElementById("menuLogout").addEventListener("click", async () => {
+      await signOut(auth);
+      window.location.reload();
+    });
 
     mostrarHome(); // carga inicial
   } else {
